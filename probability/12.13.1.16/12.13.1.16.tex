@@ -1,0 +1,54 @@
+%\documentclass[class=article, crop=false]{standalone}
+\documentclass{article}
+\usepackage{amssymb,amsfonts,amsthm,amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref,xcolor}
+\hypersetup{
+    colorlinks,
+    urlcolor={black}	%black!50!blue
+}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+%\newcommand{\varsol}{\noindent \textbf{Aliter: }}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+%\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\setlist[enumerate]{font=\small\bfseries}
+\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
+
+\begin{document}
+
+\title{PROBABILITY}
+\author{\Large UDAY KUMAR - FWC22086}
+\date{}
+
+\maketitle
+
+\begin{enumerate}[label=13.\arabic{enumi}.\arabic{enumii}]%.ref=\thesection.\theenumi.\theenumi]
+\numberwithin{equation}{enumi}
+\setcounter{enumi}{0}
+\setcounter{enumii}{6}
+
+\item \footnote{Read question numbers as (CHAPTER NUMBER).(EXERCISE NUMBER).(QUESTION NUMBER)}{If \pr{A}= $\frac{1}{2}$,\pr{B}=0,then \pr{A \mid B} is }[1ex]
+\begin{enumerate}
+\item 0
+\item $\frac{1}{2}$
+\item not defined
+\item 1
+\end{enumerate}
+	\solution\\
+		From the defnition of conditional probability\\
+\begin{align}
+&\pr{A \mid B} = \frac{\pr{A B}}{\pr{B}}&
+\end{align}
+given P(B) = 0 implies  B = $\emptyset$ 
+\begin{align}
+&AB = \emptyset&\\
+&\pr{A B} =0&\\
+&\pr{A \mid B} = \frac{P(AB)}{P(B)}&\\
+&\pr{A \mid B} = \frac{0}{0}&
+\end{align}
+$\therefore$ \pr{A \mid B} is not defined
+\end{enumerate}
+\end{document}
